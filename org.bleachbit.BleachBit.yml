@@ -1,6 +1,6 @@
 id: org.bleachbit.BleachBit
 runtime: org.gnome.Platform
-runtime-version: "43"
+runtime-version: '43'
 sdk: org.gnome.Sdk
 command: bleachbit
 finish-args:
@@ -25,7 +25,7 @@ modules:
       - /share/pixmaps
     sources:
       - type: git
-        url: "https://github.com/bleachbit/bleachbit.git"
+        url: https://github.com/bleachbit/bleachbit.git
         commit: db612a5d4e509c43e0838d1242c13c4d8ed8ae0a
         branch: v4.4.2
         x-checker-data:
@@ -33,6 +33,7 @@ modules:
           project-id: 200
           stable-only: true
           tag-template: v$version
+        tag: v4.4.2
       - type: shell
         commands:
           - >-
@@ -56,6 +57,7 @@ modules:
           # Put the version to the metadata
           - >-
             appstream-util modify org.bleachbit.BleachBit.metainfo.xml releases
-            "<release version=\"$(git describe --tags)\" date=\"$(git log -1 --format=%ci | awk '{print $1}')\"/>"
+            "<release version=\"$(git describe --tags)\" date=\"$(git log -1 --format=%ci
+            | awk '{print $1}')\"/>"
           - sed -i -e "s,<releases>&lt;,<releases><," -e "s,&gt;</releases>,></releases>,"
             org.bleachbit.BleachBit.metainfo.xml

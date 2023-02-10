@@ -26,14 +26,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/bleachbit/bleachbit.git
+        tag: v4.4.2
         commit: db612a5d4e509c43e0838d1242c13c4d8ed8ae0a
-        branch: v4.4.2
         x-checker-data:
           type: anitya
           project-id: 200
           stable-only: true
           tag-template: v$version
-        tag: v4.4.2
       - type: shell
         commands:
           - >-

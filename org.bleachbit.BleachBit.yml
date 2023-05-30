@@ -1,6 +1,6 @@
 id: org.bleachbit.BleachBit
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 command: bleachbit
 finish-args:

@@ -30,10 +30,11 @@ modules:
         tag: v4.5.0
         commit: 3c2f39bf53683d3aecd76334c1acd69b93469d94
         x-checker-data:
-          type: anitya
-          project-id: 200
-          stable-only: true
-          tag-template: v$version
+          type: json
+          url: https://api.github.com/repos/bleachbit/bleachbit/releases/latest
+          version-query: .tag_name
+          tag-query: .tag_name
+          timestamp-query: .published_at
       - type: shell
         commands:
           - >-

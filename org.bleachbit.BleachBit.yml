@@ -27,8 +27,8 @@ modules:
       - type: git
         url: https://github.com/bleachbit/bleachbit.git
         # v4.5.0 has not been released and raises a no module error: https://github.com/bleachbit/bleachbit/issues/1550
-        tag: v4.5.0
-        commit: 3c2f39bf53683d3aecd76334c1acd69b93469d94
+        tag: v4.4.2
+        commit: db612a5d4e509c43e0838d1242c13c4d8ed8ae0a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/bleachbit/bleachbit/releases/latest

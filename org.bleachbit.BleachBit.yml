@@ -24,16 +24,17 @@ modules:
     cleanup:
       - /share/pixmaps
     sources:
-      - type: git
-        url: https://github.com/bleachbit/bleachbit.git
+      - type: archive
+        archive-type: tar-gzip
         # v4.5.0 has not been released and raises a no module error: https://github.com/bleachbit/bleachbit/issues/1550
-        tag: v4.4.2
-        commit: db612a5d4e509c43e0838d1242c13c4d8ed8ae0a
+        url: https://api.github.com/repos/bleachbit/bleachbit/tarball/v4.4.2
+        sha256: d4b4f52686eaa00b494158ff5d7508cc66efdf7ca30e7d802f0d1592f247d7e0
         x-checker-data:
-          type: anitya
-          project-id: 200
-          stable-only: true
-          tag-template: v$version
+          type: json
+          url: https://api.github.com/repos/bleachbit/bleachbit/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
+          timestamp-query: .published_at
       - type: shell
         commands:
           - >-

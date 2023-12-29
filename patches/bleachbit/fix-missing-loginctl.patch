@@ -1,0 +1,17 @@
+diff --git a/bleachbit/Unix.py b/bleachbit/Unix.py
+index 645ebb3f..a006ab7e 100755
+--- a/bleachbit/Unix.py
++++ b/bleachbit/Unix.py
+@@ -728,10 +728,8 @@ def dnf_autoremove():
+ 
+ def is_linux_display_protocol_wayland():
+     assert(sys.platform.startswith('linux'))
+-    result = General.run_external(['loginctl'])
+-    session = result[1].split('\n')[1].strip().split(' ')[0]
+-    result = General.run_external(['loginctl', 'show-session', session, '-p', 'Type'])
+-    return 'wayland' in result[1].lower()
++    result = os.environ['XDG_SESSION_TYPE']
++    return result == 'wayland'
+ 
+ 
+ def root_is_not_allowed_to_X_session():

@@ -33,6 +33,12 @@ modules:
           project-id: 200
           stable-only: true
           tag-template: v$version
+
+      # Temporary fix until a new version is released by the upstream
+      - type: file
+        url: https://github.com/bleachbit/bleachbit/raw/e1df00e3f5db05d94a76b411c9e18c4100926cf0/org.bleachbit.BleachBit.metainfo.xml
+        sha256: 26080664d361983385a3d097d472f0f765b9ee098f13065e96ca185264ab239f
+
       - type: patch
         path: patches/bleachbit/fix-missing-loginctl.patch
       - type: shell

@@ -9,6 +9,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --filesystem=home
+  - --filesystem=~/.var/app
   # update cleaner rules
   - --share=network
   - --own-name=org.gnome.Bleachbit

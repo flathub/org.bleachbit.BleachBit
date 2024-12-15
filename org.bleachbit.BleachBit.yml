@@ -10,6 +10,8 @@ finish-args:
   - --socket=wayland
   - --filesystem=home
   - --filesystem=~/.var/app
+  - --filesystem=/tmp
+  - --filesystem=/var/tmp
   # update cleaner rules
   - --share=network
   - --own-name=org.gnome.Bleachbit

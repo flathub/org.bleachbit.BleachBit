@@ -13,6 +13,8 @@ finish-args:
   # See https://github.com/flathub/org.bleachbit.BleachBit/pull/21
   - --filesystem=/tmp
   - --filesystem=/var/tmp
+  # https://github.com/bleachbit/bleachbit/blob/b64d7e38c518f533388df439190cf4e1f9139ff7/bleachbit/Cleaner.py#L486-L488
+  - --filesystem=/var/log
   # update cleaner rules
   - --share=network
   - --own-name=org.gnome.Bleachbit

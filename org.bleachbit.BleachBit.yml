@@ -10,6 +10,9 @@ finish-args:
   - --socket=wayland
   - --filesystem=home
   - --filesystem=~/.var/app
+  # See https://github.com/flathub/org.bleachbit.BleachBit/pull/21
+  - --filesystem=/tmp
+  - --filesystem=/var/tmp
   # update cleaner rules
   - --share=network
   - --own-name=org.gnome.Bleachbit

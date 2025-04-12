@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/bleachbit/bleachbit.git
-        tag: v4.9.1
-        commit: 7a263343c9778ba9a7f80c3534f3cccb9579e571
+        tag: v4.9.2
+        commit: 98676d2413a98a0ee34aac23f885c270ad0a1af5
         x-checker-data:
           type: anitya
           project-id: 200

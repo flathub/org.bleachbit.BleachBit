@@ -59,10 +59,6 @@ modules:
             True/online_update_notification_enabled = False/g'  --in-place
             ./bleachbit/__init__.py
 
-          # Put the version to the metadata
+          # Add <releases> section with <release> tag as the last tag in the metadata
           - >-
-            appstream-util modify org.bleachbit.BleachBit.metainfo.xml releases
-            "<release version=\"$(git describe --tags)\" date=\"$(git log -1 --format=%ci
-            | awk '{print $1}')\"/>"
-          - sed -i -e "s,<releases>&lt;,<releases><," -e "s,&gt;</releases>,></releases>,"
-            org.bleachbit.BleachBit.metainfo.xml
+            sed -i -e "/<\/component>/i <releases><release version=\"$(git describe --tags)\" date=\"$(git log -1 --format=%ci | awk '{print $1}')\"/></releases>" org.bleachbit.BleachBit.metainfo.xml

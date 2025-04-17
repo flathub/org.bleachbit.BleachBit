@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/bleachbit/bleachbit.git
-        tag: v4.9.2
-        commit: 98676d2413a98a0ee34aac23f885c270ad0a1af5
+        tag: v4.6.2
+        commit: f49ae456f4bf416b7d9c6e720704e69a3a3f8f80
         x-checker-data:
           type: anitya
           project-id: 200
@@ -61,4 +61,6 @@ modules:
 
           # Add <releases> section with <release> tag as the last tag in the metadata
           - >-
-            sed -i -e "/<\/component>/i <releases><release version=\"$(git describe --tags)\" date=\"$(git log -1 --format=%ci | awk '{print $1}')\"/></releases>" org.bleachbit.BleachBit.metainfo.xml
+            sed -i -e "/<\/component>/i <releases><release version=\"$(git describe
+            --tags)\" date=\"$(git log -1 --format=%ci | awk '{print $1}')\"/></releases>"
+            org.bleachbit.BleachBit.metainfo.xml

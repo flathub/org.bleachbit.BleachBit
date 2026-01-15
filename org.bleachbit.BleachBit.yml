@@ -1,6 +1,6 @@
 id: org.bleachbit.BleachBit
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: bleachbit
 finish-args:
@@ -64,3 +64,7 @@ modules:
             sed -i -e "/<\/component>/i <releases><release version=\"$(git describe
             --tags)\" date=\"$(git log -1 --format=%ci | awk '{print $1}')\"/></releases>"
             org.bleachbit.BleachBit.metainfo.xml
+
+          # Remove the wrong translation domain
+          - >-
+            sed -i '/<translation domain="bleachbit"\/>/d' org.bleachbit.BleachBit.metainfo.xml

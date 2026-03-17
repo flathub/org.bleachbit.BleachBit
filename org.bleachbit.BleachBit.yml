@@ -24,6 +24,7 @@ finish-args:
   - --talk-name=org.gtk.vfs.*
 rename-icon: bleachbit
 modules:
+  - pypi-dependencies.json
   - name: bleach
     builddir: true
     no-autogen: true

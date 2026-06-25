@@ -1,6 +1,6 @@
 id: org.bleachbit.BleachBit
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: bleachbit
 finish-args:
@@ -33,8 +33,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/bleachbit/bleachbit.git
-        tag: v6.0.0
-        commit: 0c2e7d4190e1af0fc010ea8ca78885b8b39a8beb
+        tag: v6.0.1
+        commit: a779b5fc985d7ce72a4880ebdc93a9d68f7f877f
         x-checker-data:
           type: anitya
           project-id: 200
